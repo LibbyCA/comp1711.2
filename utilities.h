@@ -62,7 +62,13 @@ void tokeniseRecord(const char *input, const char *delimiter,
  */
 FILE *open_file(char *filename, char *mode)
 {
-    // to do
+    FILE *input = fopen(filename, mode);
+    if (!input)
+    {
+        printf("Error: File could not be opened\n");
+        return NULL;
+    }
+    return input;
 }
 
 /**
@@ -89,51 +95,49 @@ int data_checker(reading *dataArray, int numReadings)
     // to do
 }
 
-
 /**
  * @brief Calculates and returns the mean of the readings in the array
- * 
+ *
  * @param dataArray The array of data from the file
  * @param numReadings The number of readings in the array
  * @return float The mean of the readings.
  */
-float find_mean(reading* dataArray, int numReadings)
+float find_mean(reading *dataArray, int numReadings)
 {
     // to do
 }
 
 /**
  * @brief Finds and returns the highest blood iron reading
- * 
+ *
  * @param dataArray The array of data from the file
  * @param numReadings The number of readings in the array
  * @return float The highest blood iron reading
  */
-float find_highest(reading* dataArray, int numReadings)
+float find_highest(reading *dataArray, int numReadings)
 {
     // to do
 }
 
 /**
  * @brief Finds and returns the lowest blood iron reading
- * 
+ *
  * @param dataArray The array of data from the file
  * @param numReadings The number of readings in the array
  * @return float The lowest blood iron reading
  */
-float find_lowest(reading* dataArray, int numReadings)
+float find_lowest(reading *dataArray, int numReadings)
 {
     // to do
 }
 
-
 /**
  * @brief Ask the user for the month to find, and then print out all readings containing that month.
- * 
+ *
  * @param dataArray The array of data from the file
  * @param numReadings The number of readings in the array
  */
-void monthly_iron(reading* dataArray, int numReadings)
+void monthly_iron(reading *dataArray, int numReadings)
 {
     // to do
 }

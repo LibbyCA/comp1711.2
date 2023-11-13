@@ -21,15 +21,12 @@ int main()
     int counter = 0;
     float mean = 0;
 
-    while (1)
-    {
-        FILE *input = fopen(filename, "r");
-        if (!input)
-        {
-            printf("Error: File could not be opened\n");
-            return 1;
-        }
+    FILE *input = open_file(filename, 'r');
 
+    // read the data in from file here
+
+    while (1) // infinite loop
+    {
         printf("A: View all your blood iron levels\n");                       // BRONZE
         printf("B: View your average blood iron level\n");                    // BRONZE
         printf("C: View your lowest blood iron level\n");                     // SILVER
@@ -44,8 +41,8 @@ int main()
 
         // this gets rid of the newline character which the user will enter
         // as otherwise this will stay in the stdin and be read next time
-        while (getchar() != '\n');
-
+        while (getchar() != '\n')
+            ;
 
         // switch statement to control the menu.
         switch (choice)
