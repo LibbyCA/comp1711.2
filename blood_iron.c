@@ -21,7 +21,7 @@ int main()
     int counter = 0;
     float mean = 0;
 
-    FILE *input = open_file(filename, 'r');
+    FILE *input = open_file(filename, "r");
 
     // read the data in from file here
 
@@ -83,6 +83,17 @@ int main()
 
         case 'C':
         case 'c':
+            counter = 0;
+            float curr_bloodIron = 0;
+
+            for (int i = 0; i < counter; i++)
+            {
+                if (daily_readings[i].bloodIron > curr_bloodIron)
+                {
+                    curr_bloodIron = daily_readings[i].bloodIron;
+                }
+            }
+            printf("The highest blood iron is %f\n", curr_bloodIron);
             return 0;
             break;
 

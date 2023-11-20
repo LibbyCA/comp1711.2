@@ -80,7 +80,7 @@ FILE *open_file(char *filename, char *mode)
  */
 int read_file(FILE *inputFile, reading *dataArray)
 {
-    // to do
+    
 }
 
 /**
