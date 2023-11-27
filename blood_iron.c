@@ -62,6 +62,7 @@ int main()
             {
                 printf("%s - Blood iron: %.1f\n", daily_readings[i].date, daily_readings[i].bloodIron);
             }
+            printf("Number of records %d\n",counter);
             fclose(input);
             break;
 
