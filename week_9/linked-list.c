@@ -58,6 +58,7 @@ int length(node* linked_list)
 {
     int counter = 1;
     node* current = linked_list;
+    // arrow operator is how you access the different parts of a struct pointer
     while(current->next != NULL)
     {
         current = current->next;
